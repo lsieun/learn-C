@@ -1,0 +1,16 @@
+src = $(wildcard ./*.c)
+obj = $(patsubst %.c, %.o, $(src))
+target = app
+$(target):$(obj)
+	gcc $^ -o $@
+
+%.o:%.c
+	gcc -c $< -o $@
+
+hello:
+	echo "hello, makefile"
+
+.PHONY:clean
+clean:
+	-mkdir /abc
+	-rm $(obj) $(target) -f
