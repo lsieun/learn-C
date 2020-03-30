@@ -50,3 +50,17 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+# CLION
+
+.idea/
+*.iml
+*.kotlin_module
+target/
+lib/
+build/
+dist/
+cmake-build-debug/
+.*
+!.gitignore
